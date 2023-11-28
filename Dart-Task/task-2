@@ -1,0 +1,58 @@
+void main(){
+
+var numbers= [1,8,3,3,4,45,5,69,10,39,91,10];
+print("This is the maximum number form the list: "+ findMaximum(numbers).toString());
+print("This is the minimum number form the list: "+ findMinimum(numbers).toString())  ;
+print("This is the the sum of the list: "+calculateSum(numbers).toString());
+print("This is the average of the list: "+ calculateAverage(numbers).toString());
+
+}
+
+int findMaximum( numbers) {
+  int maxNumber = numbers[0]; 
+  
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] > maxNumber) {
+      maxNumber = numbers[i]; 
+    }
+  }
+
+  return maxNumber;
+}
+
+int  findMinimum(numbers)
+{
+  int minNumber = numbers[0];
+  for(int i=0; i< numbers.length; i++)
+  {
+    if(numbers[i]<minNumber)
+    {
+      minNumber=numbers[i];
+    }
+  }
+  
+  return minNumber;
+}
+num calculateSum(numbers)
+{
+  num sum=0;
+
+  for(int i=0; i< numbers.length;i++)
+  {
+    sum =sum + numbers[i];
+  }
+
+  return sum;
+}
+double calculateAverage(numbers)
+{
+  num sum=0;
+    for(int i=0; i< numbers.length;i++)
+  {
+    sum+= numbers[i];
+  }
+  var average= sum /numbers.length;
+  return average;
+  
+}
+
